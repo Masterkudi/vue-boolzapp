@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #009988;
+    height: 150px;
+    position: relative;
+}
+
+body,
+html {
+    background-color: #DADBD3;
+}
+
+.row.container {
+    max-height: 90vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: white;
+    border-top: -400px;
+}
+
+.contacts-container {
+    flex-direction: column;
+}
+
+.contacts-navbar {
+    border-right: 1px solid #b1b1b1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-height: 100px;
+    background-color: #EAEAEA;
+}
+.contacts-navbar img {
+    width: 80px;
+    border-radius: 50px;
+}
+
+.alerts-line {
+    background-color: #8edafc;
+}
+
+.bell-icon {
+    background-color: #ffffff;
+    border-radius: 50px;
+}
+
+.messages-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-height: 100px;
+    background-color: #EAEAEA;
+}
+
+.chat-container {
+    background-image: url(../img/mine.jpg)
+}

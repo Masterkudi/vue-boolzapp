@@ -12,12 +12,47 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
     <!-- CSS link -->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="assets/css/boolzapp.css">
     <!-- Title -->
     <title>Boolzapp</title>
 </head>
 
 <body>
+    <header></header>
+    <main>
+        <!-- creo un container row che possa contenere le due col principali -->
+        <div class="row container pb-5 col-10 d-flex p-0">
+            <div class="contacts-container col-4 d-flex direction-column p-0">
+                <nav class="contacts-navbar">
+                    <div class="contacts-navbar-profile d-flex text-center p-3 fs-3 align-self center">
+                        <img src="assets/img/avatar_io.jpg" alt="">
+                        <p class="align-self-center m-0 p-3 fs-5">Sofia</p>
+                    </div>
+                    <div class="contacts-navbar-icons text-center p-3 fs-3 align-self-center">
+                        <i class="fa-solid fa-circle-notch" style="color: #b1b1b1;"></i>
+                        <i class="fa-solid fa-message" style="color: #b1b1b1;"></i>
+                        <i class="fa-solid fa-ellipsis-vertical" style="color: #b1b1b1;"></i>
+                    </div>
+                </nav>
+                <div class="alerts-line text-center p-3 fs-3">
+                    <div class="bell-icon p-2 align-self-start ">
+                        <i class="fa-solid fa-bell-slash" style="color: #8edafc;"></i>
+                    </div>
+                    <h5>Ricevi notifiche di nuovi messaggi</h5>
+                    <p>Attiva notifiche desktop</p>
+                </div>
+            </div>
+            <div class="messages-container col-8 d-flex direction-column p-0">
+                <div class="messages-navbar">
+
+                </div>
+                <div class="chat-container">
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="assets/js/boolzapp.js"></script>
