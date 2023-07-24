@@ -15,13 +15,16 @@ html {
     background-color: #DADBD3;
 }
 
-.row.container {
-    max-height: 90vh;
+.container-fluid {
+    max-width: 80vw;
     display: flex;
     justify-content: center;
     position: relative;
-    background-color: white;
-    border-top: -400px;
+}
+
+.row {
+    width: 100%;
+    margin-top: -130px;
 }
 
 .contacts-container {
@@ -33,21 +36,46 @@ html {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    max-height: 100px;
+    max-height: 80px;
     background-color: #EAEAEA;
 }
 .contacts-navbar img {
-    width: 80px;
+    width: 70px;
     border-radius: 50px;
 }
 
 .alerts-line {
     background-color: #8edafc;
 }
+.alerts-line-text {
+    font-size: .7rem;
+    margin: 0;
+    align-items: center;
+    line-height: 1rem;
+}
 
 .bell-icon {
     background-color: #ffffff;
     border-radius: 50px;
+}
+
+.d-flex-custom {
+    background-color: #FFFFFF;
+    flex-grow: 1;
+    border-radius: 5px;
+    align-items: center;
+}
+.d-flex-custom i {
+    padding: .5rem;
+    font-size: 1.2rem;
+}
+
+.search-bar {
+    background-color: #fafafa;
+}
+
+.form-control {
+    width: 100%;
 }
 
 .messages-container {
@@ -59,11 +87,21 @@ html {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    max-height: 100px;
+    max-height: 80px;
     background-color: #EAEAEA;
+}
+
+.messages-navbar img {
+    width: 70px;
+    border-radius: 50px;
 }
 
 .chat-container {
     background-image: url(../img/mine.jpg);
     height: 100%;
+}
+
+.form-control {
+    background-color: #CCFAB3;
+    margin-left: 40rem;
 }
