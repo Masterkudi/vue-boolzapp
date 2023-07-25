@@ -12,7 +12,7 @@ header {
 
 body,
 html {
-    background-color: #DADBD3;
+    background: linear-gradient(180deg, rgba(218,219,211,1) 0%, rgba(208,219,220,1) 61%);
 }
 
 .container-fluid {
@@ -40,7 +40,7 @@ html {
     background-color: #EAEAEA;
 }
 .contacts-navbar img {
-    width: 70px;
+    width: 50px;
     border-radius: 50px;
 }
 
@@ -50,13 +50,13 @@ html {
 .alerts-line-text {
     font-size: .7rem;
     margin: 0;
-    align-items: center;
-    line-height: 1rem;
+    font-size: .9rem;
 }
 
 .bell-icon {
     background-color: #ffffff;
-    border-radius: 50px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
 }
 
 .d-flex-custom {
@@ -92,7 +92,7 @@ html {
 }
 
 .messages-navbar img {
-    width: 70px;
+    width: 50px;
     border-radius: 50px;
 }
 

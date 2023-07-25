@@ -19,67 +19,73 @@
 
 <body>
     <header></header>
-    <main>
-        <!-- creo un container row che possa contenere le due col principali -->
-        <div class="container-fluid d-flex align-items-center justify-content-center p-0">
-            <div class="row">
-                <div class="contacts-container col-4 d-flex direction-column p-0">
-                    <nav class="contacts-navbar">
-                        <div class="contacts-navbar-profile d-flex text-center p-3 fs-3 align-self center">
-                            <img src="assets/img/avatar_io.jpg" alt="">
-                            <p class="align-self-center m-0 fs-5">Sofia</p>
+    <div id="app d-flex align-items-center justify-content-center ">
+        
+        <main>
+            <!-- creo un container row che possa contenere le due col principali -->
+            <div class="container-fluid h-100 p-0">
+                <div class="row">
+                    <div class="contacts-container col-4 d-flex direction-column p-0">
+                        <nav class="contacts-navbar">
+                            <div class="contacts-navbar-profile d-flex text-center p-3 fs-3 align-self center">
+                                <img src="assets/img/avatar_io.jpg" alt="">
+                                <p class="align-self-center p-2 m-0 fs-5">Sofia</p>
+                            </div>
+                            <div class="contacts-navbar-icons text-center p-3 fs-3 align-self-center">
+                                <i class="fa-solid fa-circle-notch p-1" style="color: #b1b1b1;"></i>
+                                <i class="fa-solid fa-message p-1" style="color: #b1b1b1;"></i>
+                                <i class="fa-solid fa-ellipsis-vertical p-1" style="color: #b1b1b1;"></i>
+                            </div>
+                        </nav>
+                        <div class="alerts-line d-flex text-center p-3 fs-3">
+                            <div class="bell-icon p-2">
+                                <i class="fa-solid fa-bell-slash banner-icon" style="color: #8edafc;"></i>
+                            </div>
+                            <div class="alerts-line-text text-start m-2">
+                                <div>Ricevi notifiche di nuovi messaggi</div>
+                                <a href="#">Attiva le notifiche desktop</a>
+                            </div>
                         </div>
-                        <div class="contacts-navbar-icons text-center p-3 fs-3 align-self-center">
-                            <i class="fa-solid fa-circle-notch" style="color: #b1b1b1;"></i>
-                            <i class="fa-solid fa-message" style="color: #b1b1b1;"></i>
-                            <i class="fa-solid fa-ellipsis-vertical" style="color: #b1b1b1;"></i>
-                        </div>
-                    </nav>
-                    <div class="alerts-line d-flex text-center p-3 fs-3">
-                        <div class="bell-icon p-2 align-self-start ">
-                            <i class="fa-solid fa-bell-slash" style="color: #8edafc;"></i>
-                        </div>
-                        <div class="alerts-line-text text-start m-0">
-                            <p>Ricevi notifiche di nuovi messaggi</p>
-                            <p>Attiva notifiche desktop</p>
+                        <div class="search-bar">
+                            <div class="d-flex d-flex-custom m-2">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="search" class="form-control" placeholder="Cerca o inizia una nuova chat"
+                                    aria-label="Search"> <!-- per qualche motivo il placeholder non funziona -->
+                            </div>
                         </div>
                     </div>
-                    <div class="search-bar">
-                        <div class="d-flex d-flex-custom m-2">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="search" class="form-control" placeholder="Cerca o inizia una nuova chat"
-                                aria-label="Search"> <!-- per qualche motivo il placeholder non funziona -->
+                    <div class="messages-container col-8 p-0">
+                        <div class="messages-navbar">
+                            <div class="contacts-navbar-profile d-flex text-center p-3 fs-3 align-self center">
+                                <img src="assets/img/avatar_1.jpg" alt="">
+                                <p class="align-self-center p-2 m-0 fs-5">Michele</p>
+                            </div>
+                            <div class="contacts-navbar-icons text-center p-3 fs-3 align-self-center">
+                                <i class="fa-solid fa-magnifying-glass p-1" style="color: #b1b1b1;"></i>
+                                <i class="fa-solid fa-paperclip p-1" style="color: #b1b1b1;"></i>
+                                <i class="fa-solid fa-ellipsis-vertical p-1" style="color: #b1b1b1;"></i>
+                            </div>
+                        </div>
+                        <div class="chat-container">
+                            <div>
+                                <br>
+                            </div>
+                            <!-- aggiungo gli input per i messaggi con i placeholder per il testo -->
+                            <div>
+                                <input type="text"
+                                    class="form-control form-control-sm w-25 p-3 mt-2 text-center rounded-3"
+                                    placeholder="Hai portato a spasso il cane?">
+                            </div>
+                            <div>
+                                <input type="text"
+                                    class="form-control form-control-sm w-25 p-3 mt-2 text-center rounded-3"
+                                    placeholder="Ricordati di stendere i panni">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="messages-container col-8 p-0">
-                    <div class="messages-navbar">
-                        <div class="contacts-navbar-profile d-flex text-center p-3 fs-3 align-self center">
-                            <img src="assets/img/avatar_1.jpg" alt="">
-                            <p class="align-self-center m-0 fs-5">Michele</p>
-                        </div>
-                        <div class="contacts-navbar-icons text-center p-3 fs-3 align-self-center">
-                            <i class="fa-solid fa-magnifying-glass" style="color: #b1b1b1;"></i>
-                            <i class="fa-solid fa-paperclip" style="color: #b1b1b1;"></i>
-                            <i class="fa-solid fa-ellipsis-vertical" style="color: #b1b1b1;"></i>
-                        </div>
-                    </div>
-                    <div class="chat-container">
-                        <div>
-                            <br>
-                        </div>
-                        <!-- aggiungo gli input per i messaggi con i placeholder per il testo -->
-                        <div>
-                            <input type="text" class="form-control form-control-sm w-25 p-3 mt-2 text-center rounded-3" placeholder="Hai portato a spasso il cane?">
-                        </div>
-                        <div>
-                            <input type="text" class="form-control form-control-sm w-25 p-3 mt-2 text-center rounded-3" placeholder="Ricordati di stendere i panni">
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </main>
-
+        </main>
+    </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="assets/js/boolzapp.js"></script>
