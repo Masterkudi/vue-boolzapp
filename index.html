@@ -20,11 +20,12 @@
 <body>
     <header></header>
 
-    <div id="app d-flex align-items-center justify-content-center ">    
+    <div id="app d-flex align-items-center justify-content-center ">
         <main>
             <!-- creo un container row che possa contenere le due col principali -->
             <div class="container-fluid h-100 p-0">
                 <div class="row">
+                    <!-- container di sinistra -->
                     <div class="contacts-container col-4 d-flex direction-column p-0">
                         <nav class="contacts-navbar">
                             <div class="contacts-navbar-profile d-flex text-center p-3 fs-3 align-self center">
@@ -43,22 +44,44 @@
                             </div>
                             <div class="alerts-line-text text-start m-2">
                                 <div>Ricevi notifiche di nuovi messaggi</div>
-                                <a href="#">Attiva le notifiche desktop</a>
+                                <a href="#" class="text-secondary">Attiva le notifiche desktop</a>
                             </div>
                         </div>
                         <div class="search-bar">
                             <div class="d-flex d-flex-custom m-2">
-                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <button class="btn btn-light p-0 bg-white"> <i
+                                        class="fa-solid fa-magnifying-glass"></i></button>
                                 <input type="search" class="form-control" placeholder="Cerca o inizia una nuova chat"
                                     aria-label="Search"> <!-- per qualche motivo il placeholder non funziona -->
                             </div>
                         </div>
+                        <div class="contact-list flex-grow-1 overflow-auto list-group-flush">
+                            <div class="list-group-item list-group-item-action d-flex p-1">
+                                <div class="avatar p-1">
+                                    <img src="assets/img/avatar_1.jpg" alt="">
+                                </div>
+                                <div class="text flex-grow-1 p-1">
+                                    <div>Michele</div>
+                                    <small>Ultimo messaggio inviato</small>
+                                </div>
+                                <div class="time-container small p-1 text-secondary">
+                                    10:20
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- container di destra -->
                     <div class="messages-container col-8 p-0">
                         <div class="messages-navbar">
                             <div class="contacts-navbar-profile d-flex text-center p-3 fs-3 align-self center">
-                                <img src="assets/img/avatar_1.jpg" alt="">
-                                <p class="align-self-center p-2 m-0 fs-5">Michele</p>
+                                <div class="avatar">
+                                    <img src="assets/img/avatar_1.jpg" alt="">
+                                </div>
+                                <div class="text-start ms-2 flex-grow-1 fs-6">
+                                    Michele
+                                    <br>
+                                    <small class="d-block text-secondary">Ultimo accesso oggi alle 12:00</small>
+                                </div>
                             </div>
                             <div class="contacts-navbar-icons text-center p-3 fs-3 align-self-center">
                                 <i class="fa-solid fa-magnifying-glass p-1" style="color: #b1b1b1;"></i>
@@ -66,13 +89,28 @@
                                 <i class="fa-solid fa-ellipsis-vertical p-1" style="color: #b1b1b1;"></i>
                             </div>
                         </div>
-                        <div class="chat-container">
-                            <div>
-                                <br>
+                        <div class="chat-container flex-grow-1 px-3 d-flex">
+                            <div class="single-message-wrapper py-1">
+                                <div class="chat-baloon sent">
+                                    <div>Hai portato a spasso il cane?</div>
+                                </div>
+                                <div class="chat-baloon sent">
+                                    <div>Ricordati di stendere i panni</div>
+                                </div>
+                            </div>
+                            <div class="single-message-wrapper py-1">
+                                <div class="chat-baloon received">
+                                    <div>Tutto fatto!!</div>
+                                </div>
                             </div>
                             <!-- aggiungo gli input per i messaggi con i placeholder per il testo -->
-                            <div>Hai portato a spasso il cane?"</div>
-                            <div>Ricordati di stendere i panni</div>
+
+                        </div>
+                        <div class="chat-navbar d-flex">
+                            <button class="btn btn-link"><i class="fas fa-smile text-secondary"></i></button>
+                            <input type="text" class="form-control b-0 m-2 text-secondary"
+                                placeholder="Scrivi un messaggio">
+                            <button class="btn btn-link"><i class="fas fa-microphone text-secondary"></i></button>
                         </div>
                     </div>
                 </div>

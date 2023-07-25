@@ -25,6 +25,7 @@ main {
 }
 
 .container-fluid {
+    background-color: #ffffff;
     max-width: 80vw;
     display: flex;
     justify-content: center;
@@ -37,6 +38,9 @@ main {
 
 .contacts-container {
     flex-direction: column;
+    display: flex;
+    flex-shrink: 0;
+    height: 100%;
 }
 
 .contacts-navbar {
@@ -48,7 +52,7 @@ main {
     background-color: #EAEAEA;
 }
 .contacts-navbar img {
-    width: 50px;
+    width: 48px;
     border-radius: 50px;
 }
 
@@ -78,6 +82,10 @@ main {
     font-size: 1.2rem;
 }
 
+.btn.btn-light {
+    border-color: #ffffff;
+}
+
 .search-bar {
     background-color: #fafafa;
 }
@@ -86,6 +94,11 @@ main {
     width: 100%;
 }
 
+.avatar img {
+    width: 48px;
+    border-radius: 50px;
+}
+ 
 .messages-container {
     display: flex;
     flex-direction: column;
@@ -100,7 +113,7 @@ main {
 }
 
 .messages-navbar img {
-    width: 50px;
+    width: 48px;
     border-radius: 50px;
 }
 
@@ -112,4 +125,34 @@ main {
 .form-control {
     background-color: #ffffff;
     margin-left: auto;
+    border-color: #ffffff;
+}
+
+.single-message-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-baloon.sent {
+    align-self: flex-end;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: .5rem;
+    background-color: #CCFAB3;
+    display: inline-block;
+    min-width: 250px;
+}
+
+.chat-baloon.received {
+    align-self: flex-start;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: .5rem;
+    background-color: #ffffff;
+    display: inline-block;
+    min-width: 250px;
+}
+
+.chat-navbar {
+    background-color: #F4EEEA;
 }
