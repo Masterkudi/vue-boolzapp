@@ -10,7 +10,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Bootstrap links -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
     <!-- CSS link -->
     <link rel="stylesheet" href="assets/css/boolzapp.css">
     <!-- Title -->
@@ -30,7 +29,7 @@
                         <nav class="contacts-navbar">
                             <div class="contacts-navbar-profile d-flex text-center p-3 fs-3 align-self center">
                                 <img src="assets/img/avatar_io.jpg" alt="">
-                                <p class="align-self-center p-2 m-0 fs-5">Sofia</p>
+                                <p class="align-self-center p-2 m-0 fs-5">Andrea</p>
                             </div>
                             <div class="contacts-navbar-icons text-center p-3 fs-3 align-self-center">
                                 <i class="fa-solid fa-circle-notch p-1" style="color: #b1b1b1;"></i>
@@ -52,17 +51,19 @@
                                 <button class="btn btn-light p-0 bg-white"> <i
                                         class="fa-solid fa-magnifying-glass"></i></button>
                                 <input type="search" class="form-control" placeholder="Cerca o inizia una nuova chat"
-                                    aria-label="Search"> <!-- per qualche motivo il placeholder non funziona -->
+                                    aria-label="Search">
                             </div>
                         </div>
                         <div class="contacts-list flex-grow-1 overflow-auto list-group list-group-flush">
-                            <div class="list-group-item list-group-item-action d-flex p-1" v-for="contact in contactsList">
+                            <div class="list-group-item list-group-item-action d-flex p-1"
+                                v-for="contact in contactsList" @click="onUserClick(contact)">
                                 <div class="avatar p-1">
                                     <img :src="getAvatarSrc(contact)" alt="">
                                 </div>
                                 <div class="text flex-grow-1 ">
                                     <div>{{contact.name}}</div>
                                     <small>Ultimo messaggio inviato</small>
+
                                 </div>
                                 <div class="time-container small p-1 text-secondary">
                                     10:20
@@ -74,11 +75,12 @@
                     <div class="messages-container col-8 p-0">
                         <div class="messages-navbar">
                             <div class="contacts-navbar-profile d-flex text-center p-3 fs-3 align-self center">
-                                <div class="avatar">
+                                <div class="avatar" v-if="currentContact">
                                     <img src="assets/img/avatar_1.jpg" alt="">
+                                    {{currentContact.image}}
                                 </div>
-                                <div class="text-start ms-2 flex-grow-1 fs-6">
-                                    Michele
+                                <div class="text-start ms-2 flex-grow-1 fs-6" v-if="currentContact">
+                                    {{currentContact.name}}
                                     <br>
                                     <small class="d-block text-secondary">Ultimo accesso oggi alle 12:00</small>
                                 </div>
@@ -90,18 +92,8 @@
                             </div>
                         </div>
                         <div class="chat-container flex-grow-1 px-3">
-                            <div class="single-message-wrapper py-1">
-                                <div class="chat-baloon sent">
-                                    <div>Hai portato a spasso il cane?</div>
-                                </div>
-                                <div class="chat-baloon sent">
-                                    <div>Ricordati di stendere i panni</div>
-                                </div>
-                            </div>
-                            <div class="single-message-wrapper py-1">
-                                <div class="chat-baloon received">
-                                    <div>Tutto fatto!!</div>
-                                </div>
+                            <div class="single-message-wrapper py-1" v-for="messageObj in currentContact.messages"><!-- questo v-for legge il testo message nell'oggetto dell'array-->
+                                <div class="chat-baloon" :class="messageObj.status">{{messageObj.message}}</div>
                             </div>
                             <!-- aggiungo gli input per i messaggi con i placeholder per il testo -->
                         </div>
