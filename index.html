@@ -20,8 +20,8 @@
 <body>
     <header></header>
 
-    <div id="app d-flex align-items-center justify-content-center ">
-        <main>
+    <div id="app">
+        <main class="d-flex align-items-center justify-content-center ">
             <!-- creo un container row che possa contenere le due col principali -->
             <div class="container-fluid h-100 p-0">
                 <div class="row">
@@ -56,13 +56,12 @@
                             </div>
                         </div>
                         <div class="contacts-list flex-grow-1 overflow-auto list-group list-group-flush">
-                            <div class="list-group-item list-group-item-action d-flex p-1" 
-                            v-for="contact in contactsList">
+                            <div class="list-group-item list-group-item-action d-flex p-1" v-for="contact in contactsList">
                                 <div class="avatar p-1">
                                     <img :src="getAvatarSrc(contact)" alt="">
                                 </div>
                                 <div class="text flex-grow-1 ">
-                                    <div>Michele</div>
+                                    <div>{{contact.name}}</div>
                                     <small>Ultimo messaggio inviato</small>
                                 </div>
                                 <div class="time-container small p-1 text-secondary">
