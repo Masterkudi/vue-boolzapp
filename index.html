@@ -92,15 +92,17 @@
                             </div>
                         </div>
                         <div class="chat-container flex-grow-1 px-3">
-                            <div class="single-message-wrapper py-1" v-for="messageObj in currentContact.messages"><!-- questo v-for legge il testo message nell'oggetto dell'array-->
+                            <div class="single-message-wrapper py-1" v-for="messageObj in currentContact.messages">
+                                <!-- questo v-for legge il testo message nell'oggetto dell'array-->
                                 <div class="chat-baloon" :class="messageObj.status">{{messageObj.message}}</div>
+                                <!-- la classe messageObj.status differenzia il messaggio nell'oggetto a seconda che sia status sent o received -->
                             </div>
                             <!-- aggiungo gli input per i messaggi con i placeholder per il testo -->
                         </div>
                         <div class="chat-navbar d-flex">
                             <button class="btn btn-link"><i class="fas fa-smile text-secondary"></i></button>
                             <input type="text" class="form-control b-0 m-2 text-secondary"
-                                placeholder="Scrivi un messaggio">
+                                placeholder="Scrivi un messaggio" v-model="newMessageText" @keyup.enter="sendMessage" />
                             <button class="btn btn-link"><i class="fas fa-microphone text-secondary"></i></button>
                         </div>
                     </div>

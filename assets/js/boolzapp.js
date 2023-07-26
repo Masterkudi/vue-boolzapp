@@ -148,12 +148,14 @@ const app = createApp({
                     ],
                 },
             ],
-            currentContact: null
+            currentContact: null,
+            newMessageText: ""
         }
     },
 
     // imposto i metodi. getAvatarSrc per impostare le diverse foto dell'avatar dei contatti e onUserClick per cambiare utente nel container della chat 
-    // beforeMount servirà per fare in modo che Vue legga il js prima dell'html e impostare il primo utente della lista di default ad ogni ricarica della pagina
+    // beforeMount servirà per fare in modo che Vue legga il js prima dell'html e impostare il primo utente della lista di default ad ogni ricarica della pagina.
+    // sendMessage per visualizzare in chat un messaggio scritto nella barra inferiore
 
     methods: {
         getAvatarSrc(singleContact) {
@@ -161,9 +163,19 @@ const app = createApp({
         },
         onUserClick(singleContact) {
             this.currentContact = singleContact
+        },
+        sendMessage() {
+            console.log(this.newMessageText);
+            
+            this.currentContact.messages.push({
+                date: new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString(),
+                message: this.newMessageText,
+                status: "sent",
+            })
+
         }
     },
     beforeMount() {
         this.currentContact = this.contactsList[0]
     }
-  }).mount("#app")
+}).mount("#app")
