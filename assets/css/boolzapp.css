@@ -156,3 +156,7 @@ main {
 .chat-navbar {
     background-color: #F4EEEA;
 }
+
+.chat-navbar.btn {
+    padding: 2rem 1rem;
+}
