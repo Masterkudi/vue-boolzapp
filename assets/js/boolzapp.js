@@ -9,17 +9,17 @@ const app = createApp({
                     avatar: "_1",
                     messages: [
                         {
-                            date: "10/01/2020 15:30:55",
+                            date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                             message: "Hai portato a spasso il cane?",
                             status: "sent",
                         },
                         {
-                            date: "10/01/2020 15:50:00",
+                            date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                             message: "Ricordati di dargli da mangiare",
                             status: "sent",
                         },
                         {
-                            date: "10/01/2020 16:15:22",
+                            date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                             message: "Tutto fatto!",
                             status: "received",
                         },
@@ -30,17 +30,17 @@ const app = createApp({
                     avatar: "_2",
                     messages: [
                         {
-                            date: "20/03/2020 16:30:00",
+                            date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                             message: "Ciao come stai?",
                             status: "sent",
                         },
                         {
-                            date: "20/03/2020 16:30:55",
+                            date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                             message: "Bene grazie! Stasera ci vediamo?",
                             status: "received",
                         },
                         {
-                            date: "20/03/2020 16:35:00",
+                            date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                             message: "Mi piacerebbe ma devo andare a fare la spesa.",
                             status: "sent",
                         },
@@ -51,17 +51,17 @@ const app = createApp({
                     avatar: "_3",
                     messages: [
                         {
-                            date: "28/03/2020 10:10:40",
+                            date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                             message: "La Marianna va in campagna",
                             status: "received",
                         },
                         {
-                            date: "28/03/2020 10:20:10",
+                            date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                             message: "Scusa ma sicuro di non aver sbagliato chat?",
                             status: "sent",
                         },
                         {
-                            date: "28/03/2020 16:15:22",
+                            date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                             message: "Ah sì, scusa!",
                             status: "received",
                         },
@@ -72,12 +72,12 @@ const app = createApp({
                     avatar: "_4",
                     messages: [
                         {
-                            date: "10/01/2020 15:30:55",
+                            date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                             message: "perché non mi rispondi? mi stai ignorando?",
                             status: "sent",
                         },
                         {
-                            date: "10/01/2020 15:50:00",
+                            date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                             message: "Sì!",
                             status: "received",
                         },
@@ -88,12 +88,12 @@ const app = createApp({
                     avatar: "_5",
                     messages: [
                         {
-                            date: "10/01/2020 15:30:55",
+                            date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                             message: "Andiamo a quel concerto?",
                             status: "sent",
                         },
                         {
-                            date: "10/01/2020 15:50:00",
+                            date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                             message: "non posso, sono via",
                             status: "received",
                         },
@@ -104,12 +104,12 @@ const app = createApp({
                     avatar: "_6",
                     messages: [
                         {
-                            date: "10/01/2020 15:30:55",
+                            date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                             message: "Lo sai che ha aperto una nuova pizzeria?",
                             status: "sent",
                         },
                         {
-                            date: "10/01/2020 15:50:00",
+                            date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                             message: "Si, ma preferirei andare al cinema",
                             status: "received",
                         },
@@ -120,12 +120,12 @@ const app = createApp({
                     avatar: "_7",
                     messages: [
                         {
-                            date: "10/01/2020 15:30:55",
+                            date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                             message: "Lo sai che ha aperto una nuova pizzeria?",
                             status: "sent",
                         },
                         {
-                            date: "10/01/2020 15:50:00",
+                            date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                             message: "Si, ho sentito dire che la loro pizza è buonissima.",
                             status: "received",
                         },
@@ -136,12 +136,12 @@ const app = createApp({
                     avatar: "_8",
                     messages: [
                         {
-                            date: "10/01/2020 15:30:55",
+                            date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                             message: "Ciao, come stai? vieni fare un giro con me al lago?",
                             status: "sent",
                         },
                         {
-                            date: "10/01/2020 15:50:00",
+                            date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                             message: "Ciao, sì mi piacerebbe molto",
                             status: "received",
                         },
@@ -166,14 +166,26 @@ const app = createApp({
         },
         sendMessage() {
             console.log(this.newMessageText);
+            // il this.$refs ritona un elemnto html in maniera simile al getElementById
+            console.log(this.$refs.chatContainer);
             
             this.currentContact.messages.push({
-                date: new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString(),
+                date: new Intl.DateTimeFormat('it', { dateStyle: 'short', timeStyle: 'medium'}).format(new Date()),
                 message: this.newMessageText,
                 status: "sent",
             })
-
-        }
+            // la formula sottostante svuota la barra dei messaggi ogni volta hce premo invio per inviare il messaggio
+            this.newMessageText = ""
+            
+            // questa formula in cui scrollTop è = a scrollHeight fa in modo di scorrere in basso la chat dei messaggi
+            // la funzione setTimeout "mette in coda" il comando fornito tra le graffe eseguendo prima il resto dell'html
+            // questo fa in modo (in questo cas) che lo scroll avvenga dopo ogni messaggio inviato
+            setTimeout(() => {
+                this.$refs.chatContainer.scrollTop = 
+                this.$refs.chatContainer.scrollHeight;
+            }, 0);
+            
+        },
     },
     beforeMount() {
         this.currentContact = this.contactsList[0]

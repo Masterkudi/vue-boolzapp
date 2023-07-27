@@ -160,3 +160,13 @@ main {
 .chat-navbar.btn {
     padding: 2rem 1rem;
 }
+
+.message-time {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    font-size: .6rem;
+    padding: .3rem;
+}
