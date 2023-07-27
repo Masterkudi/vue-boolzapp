@@ -76,8 +76,7 @@
                         <div class="messages-navbar">
                             <div class="contacts-navbar-profile d-flex text-center p-3 fs-3 align-self center">
                                 <div class="avatar" v-if="currentContact">
-                                    <img src="assets/img/avatar_1.jpg" alt="">
-                                    {{currentContact.image}}
+                                    <img :src="getAvatarSrc(currentContact)">
                                 </div>
                                 <div class="text-start ms-2 flex-grow-1 fs-6" v-if="currentContact">
                                     {{currentContact.name}}
