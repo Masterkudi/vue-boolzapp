@@ -149,8 +149,9 @@ const app = createApp({
                 },
             ],
             currentContact: null,
-            newMessageText: ""
-        }
+            newMessageText: "",
+            searchText: ""
+        };
     },
 
     // imposto i metodi. getAvatarSrc per impostare le diverse foto dell'avatar dei contatti e onUserClick per cambiare utente nel container della chat 
